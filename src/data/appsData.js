@@ -3,7 +3,7 @@
  * =========================================================================
  * Collection of active released applications & live tools.
  * All entries have live deployed releases.
- * Total Projects: 18
+ * Total Projects: 13
  */
 
 export const categoriesList = [
@@ -47,6 +47,19 @@ Create interactive 3D virtual birthday experiences with customizable cake cuttin
 Features transparent pricing, technician assignment alerts, real-time job acceptance, material billing, and welfare tracking for community service cooperatives.`,
     screenshots: [
       "/apps/kaamsaathi/icon.jpg"
+    ]
+  },
+  {
+    id: "mohitomart",
+    name: "MohitoMart",
+    tagline: "Modern full-stack e-commerce storefront & marketplace",
+    category: "Tools",
+    icon: "/apps/mohitomart/icon.png",
+    url: "https://mohitomart.vercel.app",
+    github: "https://github.com/Kunal18sm/MohitoMart",
+    description: `MohitoMart is a full-featured modern online store with lightning-fast product search, category browsing, shopping cart state management, and seamless order checkout workflows.`,
+    screenshots: [
+      "/apps/mohitomart/icon.png"
     ]
   },
   {
@@ -143,60 +156,6 @@ Navigate through an interactive 3D night jungle map, leap across hazardous terra
     ]
   },
   {
-    id: "dsa-visualizer",
-    name: "DSA Visualizer",
-    tagline: "Interactive Data Structures & Algorithms visualizer with C++ simulations",
-    category: "Tools",
-    icon: "/apps/dsavisualizer/icon.svg",
-    url: "https://dsa-visualizer-sable.vercel.app/",
-    github: "https://github.com/Kunal18sm/DSA-Visualizer",
-    description: `Interactive open-source web platform that visualizes Data Structures and Algorithms through real-time step-by-step animations and side-by-side C++ code implementations.
-
-Helps developers and students intuitively master sorting, graphs, trees, and pathfinding logic through color-coded simulations.`,
-    screenshots: [
-      "/apps/dsavisualizer/icon.svg"
-    ]
-  },
-  {
-    id: "realtime-chatapp",
-    name: "Realtime Chatapp",
-    tagline: "Instant messaging & image sharing with 32+ DaisyUI themes",
-    category: "Creative",
-    icon: "/apps/realtimechatapp/icon.svg",
-    url: "https://realtime-chatapp-seven.vercel.app",
-    github: "https://github.com/Kunal18sm/Realtime-Chatapp",
-    description: `Full-stack real-time chat application built with MERN stack, Socket.io, JWT authentication, instant online status indicators, image sharing, and over 32 customizable themes.`,
-    screenshots: [
-      "/apps/realtimechatapp/icon.svg"
-    ]
-  },
-  {
-    id: "jgec-gym-bros",
-    name: "JGEC Gym Bros",
-    tagline: "College gym community portal, workouts & fitness tracker",
-    category: "Utilities",
-    icon: "/apps/jgecgym/icon.svg",
-    url: "https://jgec-gym-bros.vercel.app",
-    github: "https://github.com/Kunal18sm/JGEC_GYM_BROS",
-    description: `A college fitness and gym management web application built for students and gym-goers to organize workout regimens, track personal bests, and build campus camaraderie.`,
-    screenshots: [
-      "/apps/jgecgym/icon.svg"
-    ]
-  },
-  {
-    id: "skill-route",
-    name: "Skill-Route",
-    tagline: "Developer career roadmap & skill pathway navigator",
-    category: "Tools",
-    icon: "/apps/skillroute/icon.svg",
-    url: "https://sage-crumble-177299.netlify.app/",
-    github: "https://github.com/Kunal18sm/Skill-Route",
-    description: `Skill-Route maps out clear, step-by-step learning journeys for budding developers and engineering students across frontend, backend, AI, and DevOps specializations.`,
-    screenshots: [
-      "/apps/skillroute/icon.svg"
-    ]
-  },
-  {
     id: "ometrain",
     name: "OmeTrain",
     tagline: "Real-time anonymous 3D train messaging & photos",
@@ -230,19 +189,6 @@ Share ideas, showcase university projects, discover campus tech events, connect 
     ]
   },
   {
-    id: "sunset",
-    name: "Sunset Ambient Canvas",
-    tagline: "Aesthetic interactive sunset visualizer & relaxing ambient canvas",
-    category: "Creative",
-    icon: "/apps/sunset/icon.svg",
-    url: "https://kunal18sm.github.io/sunset/",
-    github: "https://github.com/Kunal18sm/sunset",
-    description: `An artistic interactive web experience replicating golden hour sunlight, dynamic horizon gradients, and atmospheric lighting using pure HTML5 Canvas and CSS animations.`,
-    screenshots: [
-      "/apps/sunset/icon.svg"
-    ]
-  },
-  {
     id: "portfolio",
     name: "Kunal.Dev Portfolio",
     tagline: "Official personal developer portfolio & MERN creations",
@@ -266,19 +212,6 @@ Share ideas, showcase university projects, discover campus tech events, connect 
     description: `Curated assortment of creative HTML/CSS/JavaScript interactive micro-applications, CSS animation experiments, calculators, and UI prototypes.`,
     screenshots: [
       "/apps/miniprojects/icon.svg"
-    ]
-  },
-  {
-    id: "miniwebsites",
-    name: "Mini Websites Showcase",
-    tagline: "Curated standalone web experiments & HTML5 landing pages",
-    category: "Creative",
-    icon: "/apps/miniwebsites/icon.svg",
-    url: "https://kunal18sm.github.io/mini-websites/",
-    github: "https://github.com/Kunal18sm/mini-websites",
-    description: `Collection of standalone landing pages, microsites, and design explorations crafted to test creative layouts, typography, and responsive grid structures.`,
-    screenshots: [
-      "/apps/miniwebsites/icon.svg"
     ]
   }
 ];
