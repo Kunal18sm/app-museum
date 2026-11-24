@@ -113,7 +113,7 @@ Delivers curated short-form vertical lessons covering Maths calculation shortcut
     tagline: "Instant YouTube video transcript generator with clickable timestamps",
     category: "Tools",
     icon: "/apps/youtubetranscript/icon.png",
-    url: "https://youtube-transcript-rouge.vercel.app",
+    url: "https://youtube-transcript-iihr.onrender.com/",
     github: "https://github.com/Kunal18sm/Youtube-Transcript",
     description: `YouTube Transcript Pro is a super-fast transcript extractor capable of parsing 2 to 5 hour long video transcripts in seconds.
 
