@@ -28,7 +28,9 @@
       // Service Worker Registration
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          const isGitHubPages = window.location.pathname.startsWith('/app-museum');
+          const swPath = isGitHubPages ? '/app-museum/sw.js' : '/sw.js';
+          navigator.serviceWorker.register(swPath, { scope: isGitHubPages ? '/app-museum/' : '/' })
             .then((reg) => console.log('PWA Service Worker registered:', reg.scope))
             .catch((err) => console.log('Service Worker registration failed:', err));
         });

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowUpRight, X, ChevronLeft, ChevronRight, Maximize2, GitBranch } from 'lucide-react';
 import { useAppMuseum } from '../context/AppContext';
 import AppCard from '../components/AppCard';
+import { resolveAsset } from '../utils/assets';
 
 export default function AppDetailPage() {
   const { id } = useParams();
@@ -101,7 +102,7 @@ export default function AppDetailPage() {
             <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shrink-0 flex items-center justify-center">
               {icon ? (
                 <img 
-                  src={icon} 
+                  src={resolveAsset(icon)} 
                   alt={name} 
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -191,7 +192,7 @@ export default function AppDetailPage() {
               title="Click to view full image in same tab"
             >
               <img 
-                src={screenshots[activeScreenshot] || screenshots[0]} 
+                src={resolveAsset(screenshots[activeScreenshot] || screenshots[0])} 
                 alt={`${name} preview`}
                 className="max-h-[480px] sm:max-h-[540px] w-auto max-w-full object-contain mx-auto rounded-lg shadow-xs transition-transform duration-300 group-hover:scale-[1.01]"
                 onError={(e) => {
@@ -221,7 +222,7 @@ export default function AppDetailPage() {
                       activeScreenshot === idx ? 'border-slate-900 shadow-xs ring-1 ring-slate-900' : 'border-slate-200 opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <img src={s} alt="thumb" className="w-full h-full object-contain rounded" />
+                    <img src={resolveAsset(s)} alt="thumb" className="w-full h-full object-contain rounded" />
                   </button>
                 ))}
               </div>
@@ -309,7 +310,7 @@ export default function AppDetailPage() {
             {/* Main Expanded Image - Fully uncropped with object-contain */}
             <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-black/60 flex items-center justify-center shadow-2xl p-2 sm:p-4 min-h-[300px]">
               <img 
-                src={screenshots[activeScreenshot]} 
+                src={resolveAsset(screenshots[activeScreenshot])} 
                 alt={`${name} preview expanded`}
                 className="max-h-[80vh] sm:max-h-[82vh] max-w-full w-auto h-auto object-contain mx-auto rounded-lg"
               />

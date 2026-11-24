@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
+import { resolveAsset } from '../utils/assets';
 
 export default function AppCard({ app }) {
   const { id, name, tagline, icon, url, category } = app;
@@ -23,7 +24,7 @@ export default function AppCard({ app }) {
       <div className="w-full aspect-square rounded-xl sm:rounded-2xl border border-slate-100 bg-slate-50 overflow-hidden flex items-center justify-center relative">
         {icon ? (
           <img 
-            src={icon} 
+            src={resolveAsset(icon)} 
             alt={name} 
             className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
             onError={(e) => {
