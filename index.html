@@ -25,6 +25,13 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
     <script>
+      // Capture PWA install prompt globally so it is never missed
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        window.__pwaInstallPrompt = e;
+        window.dispatchEvent(new Event('pwa-prompt-ready'));
+      });
+
       // Service Worker Registration
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

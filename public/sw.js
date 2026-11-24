@@ -1,19 +1,26 @@
-const CACHE_NAME = 'appmuseum-cache-v1';
+const CACHE_NAME = 'appmuseum-cache-v2';
+
+// Dynamically determine basePath so it works on both localhost ('/') and GitHub Pages ('/app-museum/')
+const basePath = self.location.pathname.replace(/sw\.js$/, '');
+
 const CORE_ASSETS = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/favicon.svg',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/apple-touch-icon.png'
+  basePath,
+  basePath + 'index.html',
+  basePath + 'manifest.json',
+  basePath + 'favicon.svg',
+  basePath + 'icons/icon-192.png',
+  basePath + 'icons/icon-512.png',
+  basePath + 'icons/icon-maskable-512.png',
+  basePath + 'icons/apple-touch-icon.png'
 ];
 
 // Install: Pre-cache core shell
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(CORE_ASSETS);
+      return cache.addAll(CORE_ASSETS).catch((err) => {
+        console.warn('Pre-cache error (continuing):', err);
+      });
     })
   );
   self.skipWaiting();
@@ -45,7 +52,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Navigation requests: Network First, fallback to cached /index.html (SPA)
+  // Navigation requests: Network First, fallback to cached index.html
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
@@ -54,7 +61,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
           return response;
         })
-        .catch(() => caches.match('/index.html') || caches.match('/'))
+        .catch(() => caches.match(basePath + 'index.html') || caches.match(basePath) || caches.match('/index.html'))
     );
     return;
   }
