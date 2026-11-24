@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#10b981" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded Base Canvas -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="#059669" stroke-width="4"/>
+
+  <!-- Symbol Art with Glow -->
+  <g filter="url(#glow)">
+    
+      <!-- Tool & handshake illustration -->
+      <circle cx="256" cy="230" r="110" fill="#065f46" stroke="#10b981" stroke-width="6"/>
+      <path d="M190 270 L240 210 L270 240 L320 180" fill="none" stroke="#6ee7b7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="190" cy="270" r="14" fill="#34d399"/>
+      <circle cx="240" cy="210" r="14" fill="#34d399"/>
+      <circle cx="270" cy="240" r="14" fill="#34d399"/>
+      <circle cx="320" cy="180" r="14" fill="#34d399"/>
+      <rect x="236" y="290" width="40" height="60" rx="10" fill="#10b981"/>
+      <path d="M216 320 L296 320" stroke="#064e3b" stroke-width="8" stroke-linecap="round"/>
+    
+  </g>
+
+  <!-- Title Badge Bottom -->
+  
+  <rect x="76" y="416" width="360" height="58" rx="16" fill="#090d16" stroke="#10b981" stroke-width="2.5" opacity="0.95"/>
+  <text x="256" y="453" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="2">KAAM SAATHI</text>
+  
+</svg>
