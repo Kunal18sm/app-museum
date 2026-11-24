@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { initialApps, categoriesList } from '../data/appsData';
 
 const AppContext = createContext();
-const STORAGE_KEY = 'appmuseum_user_apps_v10';
+const STORAGE_KEY = 'appmuseum_user_apps_v11';
 
 export const AppProvider = ({ children }) => {
   const [apps, setApps] = useState(() => {
