@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppMuseum — Curated Web Apps Showcase</title>
+    <meta name="description" content="A curated, minimalist exhibition of independent web applications, digital tools, and websites." />
+    
+    <!-- PWA & Mobile Meta Tags -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="AppMuseum" />
+    <link rel="manifest" href="/app-museum/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/app-museum/favicon.svg" />
+    <link rel="apple-touch-icon" href="/app-museum/icons/apple-touch-icon.png" />
+
+    <!-- Clean inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/app-museum/assets/index-BDAa8oRD.js"></script>
+    <link rel="stylesheet" crossorigin href="/app-museum/assets/index-DZjygobZ.css">
+  </head>
+  <body class="bg-white text-slate-900 antialiased selection:bg-slate-900 selection:text-white">
+    <div id="root"></div>
+    <script>
+      // Service Worker Registration
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          const isGitHubPages = window.location.pathname.startsWith('/app-museum');
+          const swPath = isGitHubPages ? '/app-museum/sw.js' : '/sw.js';
+          navigator.serviceWorker.register(swPath, { scope: isGitHubPages ? '/app-museum/' : '/' })
+            .then((reg) => console.log('PWA Service Worker registered:', reg.scope))
+            .catch((err) => console.log('Service Worker registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>
